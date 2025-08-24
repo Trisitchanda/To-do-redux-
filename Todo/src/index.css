@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+.neon-border-wrapper {
+    position: relative;
+    border-radius: 1rem; /* matches inner rounding */
+    padding: 2px; /* thickness of the border */
+    background: linear-gradient(270deg, #ff00ff, #00ffff, #ff00ff);
+    background-size: 600% 600%;
+    animation: neon-move 6s linear infinite;
+  }
+  
+  .neon-border-inner {
+    background: wheat; /* white inner background */
+    border-radius: 0.9rem; /* slightly less to fit inside */
+    padding: 1.5rem;
+    color: #111; /* dark text for readability */
+  }
+  
+  /* Animation for moving gradient */
+  @keyframes neon-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Optional glow */
+  .neon-border-wrapper {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.4),
+                0 0 40px rgba(0, 255, 255, 0.4);
+  }
+  
+  
